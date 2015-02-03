@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{79391AC5-8752-B4CC-F33F-BB9EB1094377}</ProjectGuid>
+	<ProjectGuid>{F0F7723C-2064-5A0B-0224-22CBB4F635F6}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -111,7 +111,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Tobii.EyeX.Client.Net20">
- <HintPath>C:/Users/paudix-5/Documents/New Unity Project/Assets/Standard Assets/EyeXFramework/lib/x86/Tobii.EyeX.Client.Net20.dll</HintPath>
+ <HintPath>C:/Users/paudix-5/Documents/EyeXTestEnvironment/UnityEyeXTestEnvironment/Assets/Standard Assets/EyeXFramework/lib/x86/Tobii.EyeX.Client.Net20.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

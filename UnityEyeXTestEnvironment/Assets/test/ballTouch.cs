@@ -6,6 +6,12 @@ public class ballTouch : MonoBehaviour {
 	int maxWait = 20;
 	//string name = "";
 	bool hittable = false;
+	bool loop = false;
+
+	float timer;
+	float WaitTime  = 0.5f;
+	float ResetPoint;
+
 	void OnMouseDown () 
 	{
 		// Debug.Log("Mouse Down");
@@ -32,27 +38,37 @@ public class ballTouch : MonoBehaviour {
 		*/
 	}
 
-	WaitForSeconds doTheWait ()
-	{
-		float time = Random.Range (minWait, maxWait);
-		//yield WaitForSeconds(time);
-		yield WaitForSeconds(time);
-		while (true) {
-			//transform.Translate(-Vector3.up * objectSpeed * Time.deltaTime);
-			//yield;
-			hittable = true;
-		}
-	}
 
-	// Use this for initialization
+
+
+	
+
+	
 	void Start () {
-		hittable = false;
-		doTheWait ();
-
+		
+		ResetPoint = 1 + (Random.Range(minWait, maxWait));
+		
 	}
 	
-	// Update is called once per frame
-	void Update () {
 	
+	void Update () {
+		
+		timer += Time.deltaTime;
+		
+		if(timer < WaitTime)
+		{
+			renderer.material.color = Color.white;
+		}
+		
+		if(timer > WaitTime)
+		{
+			renderer.material.color = Color.red;
+		}
+		
+		if(timer > ResetPoint)
+		{
+			timer = 0;
+		}
+		
 	}
 }

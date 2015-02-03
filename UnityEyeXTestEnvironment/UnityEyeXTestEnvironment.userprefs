@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpinOnGaze.cs">
+    <Files>
+      <File FileName="Assets\SpinOnGaze.cs" Line="15" Column="2" />
+      <File FileName="Assets\test\ballTouch.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\EyeXFramework\Components\GazeAwareComponent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\EyeXFramework\Components\UserPresenceComponent.cs" Line="12" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
