@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RayCastCollide.cs" />
      <Compile Include="Assets\SpinOnGaze.cs" />
      <Compile Include="Assets\test\ballTouch.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
