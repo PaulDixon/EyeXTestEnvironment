@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{64CB2202-D3F8-97C7-29E0-2C3ABB801E42}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\ProfileManager.cs" />
+     <Compile Include="Assets\Scripts\Gamemenu\changeScene.cs" />
+     <Compile Include="Assets\Scripts\TestSchema.cs" />
+     <Compile Include="Assets\Scripts\application.cs" />
+     <Compile Include="Assets\Scripts\mainmenu\MenuGui.cs" />
+     <Compile Include="Assets\Scripts\mainmenu\ToogleMaleFemale.cs" />
+     <Compile Include="Assets\Scripts\mouse90.cs" />
+     <Compile Include="Assets\Scripts\states\stateMachine.cs" />
+     <Compile Include="Assets\Scripts\states\state_a.cs" />
+     <Compile Include="Assets\Scripts\steering_controls\eyetrackSteering.cs" />
+     <Compile Include="Assets\Scripts\steering_controls\steeringcontrols.cs" />
+     <Compile Include="Assets\Scripts\targetscripts\ballBehaviour.cs" />
+     <Compile Include="Assets\Scripts\targetscripts\triggerRandomball.cs" />
+     <Compile Include="Assets\Scripts\trackdata\OffState.cs" />
+     <Compile Include="Assets\Scripts\trackdata\OnState.cs" />
+     <Compile Include="Assets\Scripts\trackdata\TrackDataManager.cs" />
+     <Compile Include="Assets\Scripts\trackdata\recordState_a.cs" />
+     <Compile Include="Assets\Scripts\trackdata\sceneTrackdata.cs" />
+     <Compile Include="Assets\Scripts\ui\PrintCurrentCtrl.cs" />
+     <Compile Include="Assets\Scripts\ui\printCurrentTest.cs" />
+     <Compile Include="Assets\StartMainMenu.cs" />
+     <Compile Include="Assets\pres.cs" />
+     <None Include="Assets\trackData\tempTestdata_2.xml" />
+     <None Include="Assets\trackData\tempTestdata_1.xml" />
+     <None Include="Assets\trackData\tempTestdata_0.xml" />
+     <None Include="Assets\Standard Assets\EyeXFramework\lib\x86\Tobii.EyeX.Client.Net20.xml" />
+     <None Include="Assets\Standard Assets\EyeXFramework\lib\x64\Tobii.EyeX.Client.Net20.xml" />
+     <None Include="Assets\trackData\tempTestdata_3.xml" />
+     <None Include="Assets\trackData\tempTestdata_4.xml" />
+     <None Include="Assets\trackData\tempTestdata_5.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Tobii.EyeX.Client.Net20">
+ <HintPath>C:/Users/ojaula-0/Documents/TestArea_V1/Assets/Standard Assets/EyeXFramework/lib/x86/Tobii.EyeX.Client.Net20.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4D1A52A0-E530-3F88-1E92-B123E9977E0A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{1D5437FE-6AB4-68CB-652F-CEA019DA162D}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

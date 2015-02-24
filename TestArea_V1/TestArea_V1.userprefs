@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\mainmenu\MenuGui.cs">
+    <Files>
+      <File FileName="Assets\Scripts\mainmenu\MenuGui.cs" Line="102" Column="32" />
+      <File FileName="Assets\Scripts\application.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\trackdata\TrackDataManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\trackdata\sceneTrackdata.cs" Line="1" Column="1" />
+      <File FileName="Assets\ProfileManager.cs" Line="60" Column="18" />
+      <File FileName="Assets\Scripts\TestSchema.cs" Line="17" Column="35" />
+      <File FileName="Assets\Scripts\ui\printCurrentTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\StartMainMenu.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\ojaula-0\Documents\TestArea_V1\Assets\ProfileManager.cs" line="123" />
+      <Breakpoint file="C:\Users\ojaula-0\Documents\TestArea_V1\Assets\ProfileManager.cs" line="112" />
+      <Breakpoint file="C:\Users\ojaula-0\Documents\TestArea_V1\Assets\ProfileManager.cs" line="54" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
