@@ -307,29 +307,29 @@ public class TestSchema : MonoBehaviour {
 		
 		if (_testsTypes ["hitTargets90"]) 
 		{			
-			if(_testsTypes ["mouse"])	{_tests["mouse90"] 	  = active;}
-			if(_testsTypes ["eyeTrack"]){_tests["eyeTrack90"] = active;}
-			if(_testsTypes ["eyeMouse"]){_tests["eyeMouse90"] = active;}
+			if(_testsTypes ["mouse"])	{_tests["mouse90"] 	  = true;}
+			if(_testsTypes ["eyeTrack"]){_tests["eyeTrack90"] = true;}
+			if(_testsTypes ["eyeMouse"]){_tests["eyeMouse90"] = true;}
 		}
 		if (_testsTypes ["hitTargets360"]) 
 		{
-			if(_testsTypes ["mouse"])	{_tests["mouse360"] 	= active;}
-			if(_testsTypes ["eyeTrack"]){_tests["eyeTrack360"] 	= active;}
-			if(_testsTypes ["eyeMouse"]){_tests["eyeMouse360"] 	= active;}
+			if(_testsTypes ["mouse"])	{_tests["mouse360"] 	= true;}
+			if(_testsTypes ["eyeTrack"]){_tests["eyeTrack360"] 	= true;}
+			if(_testsTypes ["eyeMouse"]){_tests["eyeMouse360"] 	= true;}
 		}
 		if (_testsTypes ["followTargets"]) 
 		{
 			if(_testsTypes ["mouse"])	
 			{
-				_tests["mouseFollow"] 		= active;
+				_tests["mouseFollow"] 		= true;
 			}
 			if(_testsTypes ["eyeTrack"])
 			{
-				_tests["eyeTrackFollow"] 	= active;
+				_tests["eyeTrackFollow"] 	= true;
 			}
 			if(_testsTypes ["eyeMouse"])
 			{
-				_tests["eyeMouseFollow"] 	= active;
+				_tests["eyeMouseFollow"] 	= true;
 			}
 		}
 	}

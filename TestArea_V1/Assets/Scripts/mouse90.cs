@@ -8,7 +8,7 @@ public class mouse90 : MonoBehaviour {
 	void Awake()
 	{
 		//GameObject.Find("ScriptBinder").GetComponent<>;
-		sceneTrackData = new TrackDataManager ();
+		//sceneTrackData = new TrackDataManager ();
 
 	}
 	void Start () {

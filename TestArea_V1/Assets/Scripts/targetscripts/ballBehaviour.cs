@@ -9,28 +9,50 @@ public class ballBehaviour : MonoBehaviour {
 	public double timeTaken;
 	public triggerRandomball motherScript;
 
+	private TrackDataManager trackMan;
+	private Camera camera;
+	private GameObject Aim;
 
-	void Awake() {
+	void Awake() 
+	{
 		//renderer.enabled = false;
-		}
-	// Use this for initialization
-	void Start () {
-
-
 
 	}
+	// Use this for initialization
+	void Start () 
+	{
+			
+		Aim = GameObject.Find ("Aim") as GameObject;
+		camera = GameObject.Find ("Main Camera").camera;
+
+		GameObject trackerManObj = GameObject.Find ("SceneScriptBinder"); 
+		trackMan = trackerManObj.GetComponent<TrackDataManager> ();
+
+		trackMan.startNewSequence ();
+	}
+
+	void Update()
+	{
+
+		Vector3 targetScreen = camera.WorldToScreenPoint(transform.position);
+		Vector3 aimScreen = Aim.transform.position;
+		trackMan.insertDataSet (aimScreen,targetScreen);
+	}
+
+	
 
 	public void startTheCount()
 	{
 		StartCoroutine ("ActivateAndCountDown");
 	}
 
+	/*
 	void OnMouseDown()
 	{
 		Debug.Log ("Object Mouse Click");
 		hit ();
 	}
-
+*/
 	IEnumerator ActivateAndCountDown()
 	{
 		startTime = Time.fixedTime;
@@ -47,7 +69,7 @@ public class ballBehaviour : MonoBehaviour {
 		//Debug.Log ("Object Active");
 		renderer.enabled = true;
 	}
-	void hit()
+	public void hit()
 	{
 		//Debug.Log ("Object deactivate");
 		deactivate ();
@@ -67,11 +89,6 @@ public class ballBehaviour : MonoBehaviour {
 		renderer.enabled = false;
 	}
 
-	// 
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 
 }

@@ -95,17 +95,25 @@
      <Compile Include="Assets\Standard Assets\EyeX_DataCollector\old\stateMachine.cs" />
      <None Include="Assets\trackData\tempTestdata_2.xml" />
      <None Include="Assets\trackData\tempTestdata_1.xml" />
+     <None Include="Assets\trackData\tempTestdata_7.xml" />
      <None Include="Assets\trackData\tempTestdata_0.xml" />
+     <None Include="Assets\trackData\tempTestdata_10.xml" />
+     <None Include="Assets\trackData\tempTestdata_12.xml" />
      <None Include="Assets\Standard Assets\EyeXFramework\lib\x86\Tobii.EyeX.Client.Net20.xml" />
+     <None Include="Assets\trackData\tempTestdata_9.xml" />
+     <None Include="Assets\trackData\tempTestdata_8.xml" />
      <None Include="Assets\Standard Assets\EyeXFramework\lib\x64\Tobii.EyeX.Client.Net20.xml" />
      <None Include="Assets\trackData\tempTestdata_3.xml" />
+     <None Include="Assets\trackData\tempTestdata_11.xml" />
+     <None Include="Assets\prototype_textures\readme.txt" />
      <None Include="Assets\trackData\tempTestdata_4.xml" />
+     <None Include="Assets\trackData\tempTestdata_6.xml" />
      <None Include="Assets\trackData\tempTestdata_5.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Tobii.EyeX.Client.Net20">
- <HintPath>C:/Users/ojaula-0/Documents/TestArea_V1/Assets/Standard Assets/EyeXFramework/lib/x86/Tobii.EyeX.Client.Net20.dll</HintPath>
+ <HintPath>C:/Users/paudix-5/Documents/EyeXTestEnvironment/TestArea_V1/Assets/Standard Assets/EyeXFramework/lib/x86/Tobii.EyeX.Client.Net20.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
