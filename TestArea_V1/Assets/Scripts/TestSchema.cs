@@ -194,6 +194,7 @@ public class TestSchema : MonoBehaviour {
 		} 
 		else 
 		{
+			clearTest();
 			changeScene("finished");
 		}
 
@@ -234,6 +235,11 @@ public class TestSchema : MonoBehaviour {
 		*/
 	}
 
+	private void clearTest()
+	{
+		currentTestsIndex =0;
+		testRunOrder.Clear();
+	}
 	private void buildTestOrder()
 	{
 		//reset list

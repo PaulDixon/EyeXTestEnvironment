@@ -52,11 +52,14 @@
      <Compile Include="Assets\Scripts\Gamemenu\changeScene.cs" />
      <Compile Include="Assets\Scripts\TestSchema.cs" />
      <Compile Include="Assets\Scripts\application.cs" />
+     <Compile Include="Assets\Scripts\eyetrack\GazePointVisualizer.cs" />
+     <Compile Include="Assets\Scripts\eyetrack\PointVisualizerBase.cs" />
      <Compile Include="Assets\Scripts\mainmenu\MenuGui.cs" />
      <Compile Include="Assets\Scripts\mainmenu\ToogleMaleFemale.cs" />
      <Compile Include="Assets\Scripts\mouse90.cs" />
      <Compile Include="Assets\Scripts\states\stateMachine.cs" />
      <Compile Include="Assets\Scripts\states\state_a.cs" />
+     <Compile Include="Assets\Scripts\steering_controls\EyeTrackOnly.cs" />
      <Compile Include="Assets\Scripts\steering_controls\eyetrackSteering.cs" />
      <Compile Include="Assets\Scripts\steering_controls\mouseOnly.cs" />
      <Compile Include="Assets\Scripts\steering_controls\steeringcontrols.cs" />
@@ -70,7 +73,9 @@
      <Compile Include="Assets\Scripts\ui\PrintCurrentCtrl.cs" />
      <Compile Include="Assets\Scripts\ui\printCurrentTest.cs" />
      <Compile Include="Assets\StartMainMenu.cs" />
+     <Compile Include="Assets\eyemouse.cs" />
      <Compile Include="Assets\pres.cs" />
+     <Compile Include="Assets\som.cs" />
      <None Include="Assets\trackData\tempTestdata_2.xml" />
      <None Include="Assets\trackData\tempTestdata_1.xml" />
      <None Include="Assets\trackData\tempTestdata_7.xml" />
