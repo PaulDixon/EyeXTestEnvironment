@@ -54,7 +54,8 @@ public class triggerRandomball : MonoBehaviour {
 	{
 		GameObject.Find ("Next Test").GetComponent<Button>().interactable = true;
 		GameObject.Find ("Next Test").GetComponent<Image>().color = Color.green;
-		GameObject.Find ("First Person Controller").GetComponent<mouseOnly>().menuState();
+		//GameObject.Find ("Mouse Controller").GetComponent<mouseOnly>().menuState();
+		BroadcastMessage ("menuState");
 	}
 
 	Vector3 spawnBallinBox()

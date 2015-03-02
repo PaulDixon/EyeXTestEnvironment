@@ -2887,7 +2887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eye/Mouse Toggle
+  m_Text: Eyetrack
 --- !u!222 &1062680555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4784,7 +4784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eyetrack
+  m_Text: Eye/Mouse Toggle
 --- !u!222 &2113849138
 CanvasRenderer:
   m_ObjectHideFlags: 0

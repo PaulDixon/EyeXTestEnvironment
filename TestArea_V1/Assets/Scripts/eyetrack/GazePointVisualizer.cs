@@ -16,7 +16,8 @@ public class GazePointVisualizer : PointVisualizerBase
     // A reference to the EyeX host instance, initialized on Awake. See EyeXHost.GetInstance().
     private EyeXHost _eyeXHost;
     private IEyeXDataProvider<EyeXGazePoint> _gazePointProvider;
-	private EyeTrackOnly trackObserver;
+	private EyeTrackOnly trackObserver_eye;
+	private eyemouse trackObserver_eyemouse;
 
 	private sceneTrackdata ScenedataCapt;
 
@@ -42,17 +43,25 @@ public class GazePointVisualizer : PointVisualizerBase
     public void Awake()
     {
 
-		trackObserver = GetComponent<EyeTrackOnly>();
-
-		ScenedataCapt = new sceneTrackdata ();
 
         _eyeXHost = EyeXHost.GetInstance();
-        _gazePointProvider = _eyeXHost.GetGazePointDataProvider(gazePointMode);
 
 #if UNITY_EDITOR
         _oldGazePointMode = gazePointMode;
+		_gazePointProvider = _eyeXHost.GetGazePointDataProvider(gazePointMode);
 #endif
     }
+	public void OnLevelWasLoaded()
+	{
+		GameObject camScript = GameObject.Find ("Main Camera");
+		if (camScript) 
+		{
+			trackObserver_eye = camScript.GetComponent<EyeTrackOnly>();
+			trackObserver_eyemouse = camScript.GetComponent<eyemouse>();
+		}
+		ScenedataCapt = new sceneTrackdata ();
+	}
+
     public void OnEnable()
     {
         _gazePointProvider.Start();
@@ -82,7 +91,16 @@ public class GazePointVisualizer : PointVisualizerBase
 		if (!System.Single.IsNaN(gazePoint.Screen.x)) {
 			ScenedataCapt.storeTrackPoint (gazePoint);
 			DrawGUI(gazePoint, pointSize, pointColor);
-			trackObserver.updateEyeTrack(gazePoint);
+
+			//update
+			if(trackObserver_eye != null)
+			{
+				trackObserver_eye.updateEyeTrack(gazePoint);
+			}
+			if(trackObserver_eyemouse != null)
+			{
+				trackObserver_eyemouse.updateEyeTrack(gazePoint);
+			}
 		}
     }
 }

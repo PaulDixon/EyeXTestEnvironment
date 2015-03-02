@@ -56,9 +56,9 @@ public class mouseOnly : MonoBehaviour {
 		int y = Screen.height / 2;
 		Vector3 gPos = aim_sprite.GetComponent<RectTransform>().position;
 		Debug.Log ("aim_sprite.position = "  +gPos);
-		Vector2 convertedGUIPos = GUIUtility.GUIToScreenPoint(gPos);
+		//Vector2 convertedGUIPos = GUIUtility.GUIToScreenPoint(gPos);
 		//Ray ray = camera.ScreenPointToRay(new Vector3(x, y));
-		Ray ray = Camera.main.ScreenPointToRay(convertedGUIPos);
+		Ray ray = Camera.main.ScreenPointToRay(gPos);
 
 		//Ray ray = Camera.main.ScreenPointToRay(filteredscreenSpace);
 		

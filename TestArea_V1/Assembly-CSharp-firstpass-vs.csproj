@@ -94,12 +94,17 @@
      <Compile Include="Assets\Standard Assets\EyeX_DataCollector\old\state.cs" />
      <Compile Include="Assets\Standard Assets\EyeX_DataCollector\old\stateMachine.cs" />
      <None Include="Assets\trackData\tempTestdata_2.xml" />
+     <None Include="Assets\trackData\tempTestdata_16.xml" />
      <None Include="Assets\trackData\tempTestdata_1.xml" />
      <None Include="Assets\trackData\tempTestdata_7.xml" />
+     <None Include="Assets\trackData\tempTestdata_15.xml" />
+     <None Include="Assets\trackData\tempTestdata_17.xml" />
      <None Include="Assets\trackData\tempTestdata_0.xml" />
      <None Include="Assets\trackData\tempTestdata_10.xml" />
      <None Include="Assets\trackData\tempTestdata_12.xml" />
+     <None Include="Assets\trackData\tempTestdata_13.xml" />
      <None Include="Assets\Standard Assets\EyeXFramework\lib\x86\Tobii.EyeX.Client.Net20.xml" />
+     <None Include="Assets\trackData\tempTestdata_14.xml" />
      <None Include="Assets\trackData\tempTestdata_9.xml" />
      <None Include="Assets\trackData\tempTestdata_8.xml" />
      <None Include="Assets\Standard Assets\EyeXFramework\lib\x64\Tobii.EyeX.Client.Net20.xml" />

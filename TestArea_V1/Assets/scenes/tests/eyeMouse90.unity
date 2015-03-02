@@ -358,6 +358,45 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 452826283}
   m_GameObject: {fileID: 49178297}
+--- !u!1 &92055970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 92055972}
+  - 114: {fileID: 92055971}
+  m_Layer: 0
+  m_Name: SceneScriptBinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &92055971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92055970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836aad8ac6a747c4085cd43a33421ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &92055972
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92055970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.1704102, y: 27.1569977, z: -35.237999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &229829159
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +701,7 @@ GameObject:
   - 114: {fileID: 420448822}
   - 114: {fileID: 420448821}
   - 114: {fileID: 420448820}
+  - 114: {fileID: 420448826}
   m_Layer: 0
   m_Name: Scriptbinder
   m_TagString: Untagged
@@ -741,6 +781,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &420448826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483220, guid: 0feb5704d117f8543954cdd2a1151375,
+    type: 2}
+  m_PrefabInternal: {fileID: 2120049898}
+  m_GameObject: {fileID: 420448819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20beda3f4af2f6c4eb01a5d66691e70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
+  hitArray: []
+  hitArray2: []
+  hitArrayMaxSize: 0
+  hitIndex: 0
+  lastFilteredPos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
+  gazePointMode: 2
+  pointSize: 5
+  pointColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
 --- !u!1001 &452826283
 Prefab:
   m_ObjectHideFlags: 0
@@ -1529,6 +1591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPointer: {fileID: 1455927511}
   targetHitObj: {fileID: 700976575}
+  RotationSpeed: 0
 --- !u!114 &1220354891
 MonoBehaviour:
   m_ObjectHideFlags: 0

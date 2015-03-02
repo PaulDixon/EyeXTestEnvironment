@@ -39,19 +39,18 @@ public class TestSchema : MonoBehaviour {
 			_testsTypes["mouse"] 				= false;
 			_testsTypes["eyeTrack"]  			= false;
 			_testsTypes["eyeMouse"] 			= false;
-
+			
 			_tests["mouse90"]			= false;
 			_tests["mouse360"]			= false;
 			_tests["mouseFollow"]		= false;
-		
+			
 			_tests["eyeTrack360"]		= false;
 			_tests["eyeTrack90"]		= false;
 			_tests["eyeTrackFollow"]	= false;
-
+			
 			_tests["eyeMouse90"]		= false;
 			_tests["eyeMouse360"]		= false;
 			_tests["eyeMouseFollow"]	= false;
-
 
 		} 
 		else 
@@ -95,6 +94,29 @@ public class TestSchema : MonoBehaviour {
 		}
 	}
 	*/
+	private void setTestSceneFalse()
+	{
+		_tests["mouse90"]			= false;
+		_tests["mouse360"]			= false;
+		_tests["mouseFollow"]		= false;
+		
+		_tests["eyeTrack360"]		= false;
+		_tests["eyeTrack90"]		= false;
+		_tests["eyeTrackFollow"]	= false;
+		
+		_tests["eyeMouse90"]		= false;
+		_tests["eyeMouse360"]		= false;
+		_tests["eyeMouseFollow"]	= false;
+	}
+	private void setTestTypeFalse()
+	{
+		_testsTypes["hitTargets90"] 		= false;
+		_testsTypes["hitTargets360"]  		= false;
+		_testsTypes["followTargets"] 		= false;
+		_testsTypes["mouse"] 				= false;
+		_testsTypes["eyeTrack"]  			= false;
+		_testsTypes["eyeMouse"] 			= false;
+	}
 	
 	public void abortTest()
 	{
@@ -189,7 +211,7 @@ public class TestSchema : MonoBehaviour {
 		//check if more tests or finished.
 		if (currentTestsIndex < testRunOrder.Count) 
 		{
-			changeScene(testRunOrder[currentTestsIndex-1]);
+			changeScene(testRunOrder[currentTestsIndex]);
 			return;
 		} 
 		else 
@@ -310,12 +332,22 @@ public class TestSchema : MonoBehaviour {
 	}
 	public void buildTestSchema()
 	{
-		
+		setTestSceneFalse ();
+
 		if (_testsTypes ["hitTargets90"]) 
 		{			
-			if(_testsTypes ["mouse"])	{_tests["mouse90"] 	  = true;}
-			if(_testsTypes ["eyeTrack"]){_tests["eyeTrack90"] = true;}
-			if(_testsTypes ["eyeMouse"]){_tests["eyeMouse90"] = true;}
+			if(_testsTypes ["mouse"])	
+			{
+				_tests["mouse90"] 	 = true;
+			}
+			if(_testsTypes ["eyeTrack"])
+			{
+				_tests["eyeTrack90"] = true;
+			}
+			if(_testsTypes ["eyeMouse"])
+			{
+				_tests["eyeMouse90"] = true;
+			}
 		}
 		if (_testsTypes ["hitTargets360"]) 
 		{

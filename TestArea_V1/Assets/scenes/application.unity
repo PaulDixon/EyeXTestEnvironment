@@ -258,6 +258,7 @@ GameObject:
   - 114: {fileID: 1274321225}
   - 114: {fileID: 1274321224}
   - 114: {fileID: 1274321223}
+  - 114: {fileID: 1274321226}
   m_Layer: 0
   m_Name: Scriptbinder
   m_TagString: Untagged
@@ -337,3 +338,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2efc0ca7af04d043bd56a0e15266a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1274321226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483220, guid: 0feb5704d117f8543954cdd2a1151375,
+    type: 2}
+  m_PrefabInternal: {fileID: 928691003}
+  m_GameObject: {fileID: 1274321219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20beda3f4af2f6c4eb01a5d66691e70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
+  hitArray: []
+  hitArray2: []
+  hitArrayMaxSize: 0
+  hitIndex: 0
+  lastFilteredPos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
+  gazePointMode: 2
+  pointSize: 5
+  pointColor: {r: 1, g: .921568632, b: .0156862754, a: 1}

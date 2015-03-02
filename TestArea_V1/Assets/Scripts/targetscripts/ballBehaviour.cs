@@ -23,7 +23,7 @@ public class ballBehaviour : MonoBehaviour {
 
 	void Start () 
 	{
-		/*
+
 		Aim = GameObject.Find ("Aim") as GameObject;
 		camera = GameObject.Find ("Main Camera").camera;
 
@@ -31,16 +31,16 @@ public class ballBehaviour : MonoBehaviour {
 		trackMan = trackerManObj.GetComponent<TrackDataManager> ();
 
 		trackMan.startNewSequence ();
-		*/
+
 	}
 
 	void Update()
 	{
-		/*
+
 		Vector3 targetScreen = camera.WorldToScreenPoint(transform.position);
 		Vector3 aimScreen = Aim.transform.position;
 		trackMan.insertDataSet (aimScreen,targetScreen);
-		*/
+
 	}
 
 	
