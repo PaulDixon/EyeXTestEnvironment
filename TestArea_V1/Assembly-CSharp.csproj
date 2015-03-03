@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\steering_controls\mouseOnly.cs" />
      <Compile Include="Assets\Scripts\steering_controls\steeringcontrols.cs" />
      <Compile Include="Assets\Scripts\targetscripts\ballBehaviour.cs" />
+     <Compile Include="Assets\Scripts\targetscripts\sineMovement.cs" />
      <Compile Include="Assets\Scripts\trackdata\OffState.cs" />
      <Compile Include="Assets\Scripts\trackdata\OnState.cs" />
      <Compile Include="Assets\Scripts\trackdata\TrackDataManager.cs" />
