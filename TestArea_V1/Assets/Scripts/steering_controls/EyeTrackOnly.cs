@@ -81,9 +81,9 @@ public class EyeTrackOnly : MonoBehaviour
 	void cursorHitTest()
 	{
 		Debug.Log ("cursorHitTest");
-		//int x = Screen.width / 2;
-		//int y = Screen.height / 2;
+
 		Vector3 gPos = aim_sprite.GetComponent<RectTransform>().position;
+
 		Debug.Log ("aim_sprite.position = "  +gPos);
 		//Vector2 convertedGUIPos = GUIUtility.GUIToScreenPoint(gPos);
 		//Ray ray = camera.ScreenPointToRay(new Vector3(x, y));
@@ -97,7 +97,7 @@ public class EyeTrackOnly : MonoBehaviour
 			
 			if (hit.collider != null) 
 			{
-				GameObject.Find ("Sphere").transform.position = hit.point;
+				//GameObject.Find ("Sphere").transform.position = hit.point;
 
 				ballBehaviour b = hit.collider.gameObject.GetComponent<ballBehaviour>();//.hit();
 				if (b != null)
@@ -115,6 +115,9 @@ public class EyeTrackOnly : MonoBehaviour
 	public void updateEyeTrack(EyeXGazePoint gazePoint)
 	{
 		_gazePoint = gazePoint;
+
+		Vector3 gPos = _gazePoint.Screen;
+		aim_sprite.GetComponent<RectTransform> ().position = gPos;
 	}
 
 	public void gameState()

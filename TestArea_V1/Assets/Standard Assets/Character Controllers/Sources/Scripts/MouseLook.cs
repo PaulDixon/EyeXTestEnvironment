@@ -32,7 +32,8 @@ public class MouseLook : MonoBehaviour {
 
 	void Update ()
 	{
-
+		forceRotation (new Vector3 (Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"), 0));
+		/*
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -51,10 +52,38 @@ public class MouseLook : MonoBehaviour {
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			
-			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+			transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+		}
+		*/
+	}
+
+	public void  forceRotation(Vector3 changeV)
+	{
+				if (axes == RotationAxes.MouseXAndY) {
+						float rotationX = transform.localEulerAngles.y + changeV [0] * sensitivityX;
+			
+						rotationY += changeV [1] * sensitivityY;
+						rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+			
+						transform.localEulerAngles = new Vector3 (-rotationY, rotationX, 0);
+				} else if (axes == RotationAxes.MouseX) {
+						transform.Rotate (0, changeV [0] * sensitivityX, 0);
+
+			                         
+		} else {
+						//rotationY += changeV [1] * sensitivityY;
+						//rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+						
+						//transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+						transform.Rotate (-changeV [1] * sensitivityY, 0, 0);
+			
 		}
 	}
-	
+
+
+	//transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+	//transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+
 	void Start ()
 	{
 		// Make the rigid body not change rotation

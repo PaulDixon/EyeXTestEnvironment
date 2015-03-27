@@ -17,7 +17,7 @@ public class GazePointVisualizer : PointVisualizerBase
     private EyeXHost _eyeXHost;
     private IEyeXDataProvider<EyeXGazePoint> _gazePointProvider;
 	private EyeTrackOnly trackObserver_eye;
-	private eyemouse trackObserver_eyemouse;
+	private EyeMouse trackObserver_eyemouse;
 
 	private sceneTrackdata ScenedataCapt;
 
@@ -57,7 +57,7 @@ public class GazePointVisualizer : PointVisualizerBase
 		if (camScript) 
 		{
 			trackObserver_eye = camScript.GetComponent<EyeTrackOnly>();
-			trackObserver_eyemouse = camScript.GetComponent<eyemouse>();
+			trackObserver_eyemouse = camScript.GetComponent<EyeMouse>();
 		}
 		ScenedataCapt = new sceneTrackdata ();
 	}
@@ -89,17 +89,19 @@ public class GazePointVisualizer : PointVisualizerBase
 		var gazePoint = _gazePointProvider.Last;
 		//filter nan values.
 		if (!System.Single.IsNaN(gazePoint.Screen.x)) {
-			ScenedataCapt.storeTrackPoint (gazePoint);
-			DrawGUI(gazePoint, pointSize, pointColor);
 
 			//update
 			if(trackObserver_eye != null)
 			{
 				trackObserver_eye.updateEyeTrack(gazePoint);
+				ScenedataCapt.storeTrackPoint (gazePoint);
+				DrawGUI(gazePoint, pointSize, pointColor);
 			}
 			if(trackObserver_eyemouse != null)
 			{
 				trackObserver_eyemouse.updateEyeTrack(gazePoint);
+				ScenedataCapt.storeTrackPoint (gazePoint);
+				DrawGUI(gazePoint, pointSize, pointColor);
 			}
 		}
     }

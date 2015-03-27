@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ballBehaviour : MonoBehaviour {
 
-	public float maxTime = 10f;
+	public float maxTime;
 	public float startTime;
 	public double endTime;
 	public double timeTaken;
@@ -12,6 +12,10 @@ public class ballBehaviour : MonoBehaviour {
 	private TrackDataManager trackMan;
 	private Camera camera;
 	private GameObject Aim;
+
+	public Vector3 aimScreenCord;
+	public Vector3 targetScreenCord;
+	public bool _isdead;
 
 	void Awake() 
 	{
@@ -31,20 +35,53 @@ public class ballBehaviour : MonoBehaviour {
 		trackMan = trackerManObj.GetComponent<TrackDataManager> ();
 
 		trackMan.startNewSequence ();
-
+		_isdead = false;
 	}
 
 	void Update()
 	{
+		if (!_isdead) 
+		{
+				Vector3 targetScreen = camera.WorldToScreenPoint (transform.position);
+				Vector3 aimScreen = Aim.transform.position;
 
-		Vector3 targetScreen = camera.WorldToScreenPoint(transform.position);
-		Vector3 aimScreen = Aim.transform.position;
-		trackMan.insertDataSet (aimScreen,targetScreen);
+				if (!transform.renderer.isVisible) {
+						//			Debug.LogWarning("targetScreen =" + targetScreen);
+						targetScreen.x = 9999;
+						targetScreen.y = 9999;
+
+				}
+
+
+
+				trackMan.insertDataSet (aimScreen, targetScreen);
+
+				//		Debug.Log (aimScreen);
+				//		Debug.Log (targetScreen);
+				aimScreenCord = aimScreen;
+				targetScreen = targetScreen;
+		}
+
+
 
 	}
 
-	
+	/*
+	void OnGUI()
+	{
+		Vector3 targetScreen = camera.WorldToScreenPoint(transform.position);
+		Vector3 aimScreen = Aim.transform.position;
 
+		GUI.Label(new Rect(0, 0, 100, 100), (int)(1.0f / Time.smoothDeltaTime));   
+		GUI.Label(new Rect(0, 100, 100, 100), aimScreen);  
+		GUI.Label(new Rect(0, 200, 100, 100), targetScreen);  
+	}
+*/
+	
+	void OnDestroy()
+	{
+		//trackMan.storeSequence ();
+	}
 	public void startTheCount()
 	{
 		StartCoroutine ("ActivateAndCountDown");
@@ -75,23 +112,40 @@ public class ballBehaviour : MonoBehaviour {
 	}
 	public void hit()
 	{
-		//Debug.Log ("Object deactivate");
+		_isdead = true;
 		deactivate ();
+		Renderer rend = GetComponent<Renderer> ();
+		rend.material.color = Color.green;
+		rend.material.shader = Shader.Find("Color");
+		rend.material.SetColor ("_Color", Color.green);
+
 		timeTaken = Time.fixedTime - startTime;
 		//Debug.Log ("SendMessageUpwards ('hit', " + timeTaken + ")");
 		motherScript.SendMessage("targetHit", timeTaken);
+
+
 	}
 	void fail()
 	{
-		deactivate ();
+		if (!_isdead) 
+		{
+			deactivate ();
+		}
 		//Debug.Log ("SendMessageUpwards ('fail')");
-		motherScript.SendMessage("targetFail");
+		motherScript.SendMessage("targetFail");	//target timeout really!
+
 	}
 
 	void deactivate()
 	{
-		renderer.enabled = false;
+		trackMan.storeSequence ();
+		collider.enabled = false; 
+
 	}
+
+
+
+
 
 
 

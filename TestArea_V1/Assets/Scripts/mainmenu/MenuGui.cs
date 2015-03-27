@@ -140,14 +140,14 @@ public class MenuGui : MonoBehaviour
 	public void badTestSelection()
 	{
 		GameObject.Find("TestsText").GetComponent<Text>().color = new Color(0.7F, 0F, 0F, 1F);
-		GameObject.Find("TestsText").GetComponent<Text>().text = "Test( at least one)";
+		GameObject.Find("TestsText").GetComponent<Text>().text = "CHOOSE YOUR TEST ENVIRONMENT(s)";
 		markYellowUi(GameObject.Find("testPanel"));
 	}
 	
 	public void badControlsSelection()
 	{		
 		GameObject.Find ("ControlsText").GetComponent<Text> ().color = new Color (0.7F, 0F, 0F, 1F);
-		GameObject.Find ("ControlsText").GetComponent<Text> ().text = "Controls( at least one)";
+		GameObject.Find ("ControlsText").GetComponent<Text> ().text = "CHOOSE CONTROL SYSTEM ( at least one)";
 		markYellowUi(GameObject.Find("testPanel"));
 	}
 	public void setFormName()

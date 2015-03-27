@@ -14,6 +14,7 @@ public class application : MonoBehaviour {
 	static private ProfileManager userProfile;
 	static private TestSchema testSchema;
 	static private MenuGui menuUI;
+	static private Rect screensize;
 
 	void Awake () 
 	{
@@ -30,6 +31,10 @@ public class application : MonoBehaviour {
 			userProfile 	= GetComponent<ProfileManager>();
 			testSchema 		= GetComponent<TestSchema>();
 			menuUI			= GetComponent<MenuGui>();
+			screensize		= new Rect();
+			screensize.x = Screen.width;
+			screensize.y = Screen.height;
+
 
 		} 
 		else

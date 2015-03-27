@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/tests/mouse360.unity
   - enabled: 1
-    path: Assets/scenes/tests/eyeMouse90.unity
+    path: Assets/scenes/tests/old/eyeMouse90old.unity
   - enabled: 1
-    path: Assets/scenes/tests/eyeMouse360.unity
+    path: Assets/scenes/tests/old/eyeMouse360old.unity
   - enabled: 1
     path: Assets/scenes/tests/eyeTrack90.unity
   - enabled: 1
@@ -27,5 +27,17 @@ EditorBuildSettings:
     path: Assets/scenes/tests/mouseFollow.unity
   - enabled: 1
     path: Assets/scenes/tests/finished.unity
+  - enabled: 1
+    path: Assets/scenes/tests/old/eyeMouseFollowOld.unity
+  - enabled: 1
+    path: Assets/scenes/application.unity
+  - enabled: 0
+    path: Assets/scenes/application.unity
+  - enabled: 0
+    path: Assets/scenes/application.unity
+  - enabled: 1
+    path: Assets/scenes/tests/eyeMouse90.unity
+  - enabled: 1
+    path: Assets/scenes/tests/eyeMouse360.unity
   - enabled: 1
     path: Assets/scenes/tests/eyeMouseFollow.unity

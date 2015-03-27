@@ -51,11 +51,11 @@ public class mouseOnly : MonoBehaviour {
 
 	void cursorHitTest()
 	{
-		Debug.Log ("cursorHitTest");
+	//	Debug.Log ("cursorHitTest");
 		int x = Screen.width / 2;
 		int y = Screen.height / 2;
 		Vector3 gPos = aim_sprite.GetComponent<RectTransform>().position;
-		Debug.Log ("aim_sprite.position = "  +gPos);
+	//	Debug.Log ("aim_sprite.position = "  +gPos);
 		//Vector2 convertedGUIPos = GUIUtility.GUIToScreenPoint(gPos);
 		//Ray ray = camera.ScreenPointToRay(new Vector3(x, y));
 		Ray ray = Camera.main.ScreenPointToRay(gPos);
@@ -68,7 +68,7 @@ public class mouseOnly : MonoBehaviour {
 		
 			if (hit.collider != null) 
 			{
-					Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
+			//	Debug.Log ("Target Position: " + hit.collider.gameObject.transform.position);
 				ballBehaviour b = hit.collider.gameObject.GetComponent<ballBehaviour>();//.hit();
 				if (b != null)
 				{
@@ -85,8 +85,14 @@ public class mouseOnly : MonoBehaviour {
 		//Screen.showCursor = false;
 		Screen.lockCursor = true;
 		mouseLook_X_script.enabled = true;
-		mouseLook_Y_script.enabled = true;
-		charMotor.jumping.enabled = false;
+		if (mouseLook_X_script != null && mouseLook_Y_script != null) {
+			mouseLook_X_script.enabled = true;
+			mouseLook_Y_script.enabled = true;
+		}
+		if (charMotor != null) {
+			charMotor.jumping.enabled = false;
+		}
+
 	}
 
 	public void menuState()
@@ -94,9 +100,12 @@ public class mouseOnly : MonoBehaviour {
 		bGamestate = false;
 		Screen.lockCursor = false;
 		Screen.showCursor = true;
-
-		mouseLook_X_script.enabled = false;
-		mouseLook_Y_script.enabled = false;
-		charMotor.enabled = false;
+		if (mouseLook_X_script != null && mouseLook_Y_script != null) {
+			mouseLook_X_script.enabled = false;
+			mouseLook_Y_script.enabled = false;
+				}
+		if (charMotor != null) {
+						charMotor.enabled = false;
+				}
 	}
 }

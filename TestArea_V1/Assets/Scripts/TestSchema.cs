@@ -43,9 +43,9 @@ public class TestSchema : MonoBehaviour {
 			_tests["mouse90"]			= false;
 			_tests["mouse360"]			= false;
 			_tests["mouseFollow"]		= false;
-			
-			_tests["eyeTrack360"]		= false;
+
 			_tests["eyeTrack90"]		= false;
+			_tests["eyeTrack360"]		= false;
 			_tests["eyeTrackFollow"]	= false;
 			
 			_tests["eyeMouse90"]		= false;
@@ -100,8 +100,9 @@ public class TestSchema : MonoBehaviour {
 		_tests["mouse360"]			= false;
 		_tests["mouseFollow"]		= false;
 		
-		_tests["eyeTrack360"]		= false;
+
 		_tests["eyeTrack90"]		= false;
+		_tests["eyeTrack360"]		= false;
 		_tests["eyeTrackFollow"]	= false;
 		
 		_tests["eyeMouse90"]		= false;

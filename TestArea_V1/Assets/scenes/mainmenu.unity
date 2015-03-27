@@ -153,6 +153,7 @@ GameObject:
   - 114: {fileID: 81650517}
   - 114: {fileID: 81650521}
   - 114: {fileID: 81650522}
+  - 114: {fileID: 81650523}
   m_Layer: 0
   m_Name: Scriptbinder
   m_TagString: Untagged
@@ -232,6 +233,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038303c7172832e4f8c001a43e371930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &81650523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483220, guid: 0feb5704d117f8543954cdd2a1151375,
+    type: 2}
+  m_PrefabInternal: {fileID: 201098326}
+  m_GameObject: {fileID: 81650516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20beda3f4af2f6c4eb01a5d66691e70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
+  hitArray: []
+  hitArray2: []
+  hitArrayMaxSize: 0
+  hitIndex: 0
+  lastFilteredPos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
+  gazePointMode: 2
+  pointSize: 5
+  pointColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
 --- !u!1 &138773987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,7 +2541,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10.0000076, y: -10}
+  m_AnchoredPosition: {x: 10, y: -10}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &951488679
@@ -2887,7 +2910,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eyetrack
+  m_Text: 'Eyetracker
+
+'
 --- !u!222 &1062680555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2925,7 +2950,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -207, y: -59.2000008}
+  m_AnchoredPosition: {x: 45, y: -52.7000008}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1126065185
@@ -2948,12 +2973,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tests
+  m_Text: 'CHOOSE YOUR TEST ENVIRONMENT(s)
+
+'
 --- !u!222 &1126065186
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3057,7 +3084,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -207, y: -174.5}
+  m_AnchoredPosition: {x: 31, y: -196.399994}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1192740011
@@ -3080,12 +3107,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controls
+  m_Text: CHOOSE CONTROL SYSTEM ( at least one)
 --- !u!222 &1192740012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3252,7 +3279,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 37, y: -183.100006}
+  m_AnchoredPosition: {x: 37, y: -267.100006}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1343083969
@@ -4756,8 +4783,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.99996948, y: -.5}
-  m_SizeDelta: {x: -28, y: -3}
+  m_AnchoredPosition: {x: 9, y: -.25}
+  m_SizeDelta: {x: -28, y: -3.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2113849137
 MonoBehaviour:

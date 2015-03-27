@@ -43,11 +43,17 @@ public class TrackDataManager : MonoBehaviour
 		
 		_trackSequence.trackData.Add(dataSet);
 	}
-	
+
+	public void storeSequence()
+	{
+		_sceneTrackData.sequenceData.Add (_trackSequence);
+	}
+
 	public void startNewSequence()
 	{
 		//store sequence data
-		_sceneTrackData.sequenceData.Add (_trackSequence);
+		//storeSequence ();
+
 		//start new sequence
 		_trackSequence = new TrackSequence ();
 	}
